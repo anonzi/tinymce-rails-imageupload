@@ -128,7 +128,7 @@
         var target = iframe.getEl();
         if(target.document || target.contentDocument) {
           var doc = target.contentDocument || target.contentWindow.document;
-          handleResponse(doc.getElementsByTagName("body")[0].innerHTML);
+          handleResponse(doc.getElementsByTagName("body")[0].innerText);
         } else {
           handleError("Didn't get a response from the server");
         }
